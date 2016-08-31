@@ -1,0 +1,33 @@
+p{
+	border: 1px solid black;
+
+	padding:20px; 
+	
+	opacity: 0.5;
+	color: black;
+}
+
+/*#main{
+	position:relative;
+}
+
+div#display {
+
+	position:absolute;
+}
+
+div#background {
+ background-color: white;
+ opacity: 0.5;
+
+}*/	
+
+
+
+body {
+    background-image: url(http://sugdiwa.github.io/Restaurant/img/service9.jpg);
+    background-repeat: no-repeat;
+   /* background-position: center;*/
+    background-size: cover;
+
+}
