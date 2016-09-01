@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Restaurants Locator </title>
-	<link rel="stylesheet" type="text/css" href="master.css">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Restaurants Locator </title>
+    <link rel="stylesheet" type="text/css" href="master.css">
 </head>
+
 <body>
-<form class="Search_form" >
-<h1>Restaurants Locator</h1>
-<input id="location_id" type="text" name=""><button type="submit">Submit</button>
-<select id="cuisine_id">
-	<option value="chinese">Chinese</option>
-	<option value="mexican">Mexican</option>
-	<option value="italian">Italian</option>
-	
-</select>
-<!-- <div id="main">
+    <form class="Search_form">
+        <h1>Restaurants Locator</h1>
+        <input id="location_id" type="text" name="">
+        <button type="submit">Submit</button>
+        <select id="cuisine_id">
+            <option value="chinese">Chinese</option>
+            <option value="mexican">Mexican</option>
+            <option value="italian">Italian</option>
+        </select>
+        <!-- <div id="main">
 <div id="background"> -->
-<div id="display">
-<!-- <p id="restaurants"> </p> -->
-<!-- </div>
+        <div id="display">
+            <!-- <p id="restaurants"> </p> -->
+            <!-- </div>
 </div> -->
-</div>
-
-</form>
-
-<script src="https://code.jquery.com/jquery.min.js"></script>
+        </div>
+        
+    </form>
+    <div id="map"></div>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="OAuth.js"></script>
     <script src="SHA1.js"></script>
-<script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script class="open_map" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCq6doWzudElivLWaSZ2JwMIBNQqCxmgJg" async defer></script>
 </body>
+
 </html>

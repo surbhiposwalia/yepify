@@ -1,33 +1,27 @@
-p{
-	border: 1px solid black;
+    p {
+        border: 1px solid white;
+        padding: 20px;
+       
+        color: white;
+        width: 50%;
+        
+    }
+    
+    
+    body {
+        background: url(http://sugdiwa.github.io/Restaurant/img/service9.jpg);
+        background-repeat: no-repeat;
+background-size: cover;
+font-style:bold;
+color: solid black ; 
 
-	padding:20px; 
-	
-	opacity: 0.5;
-	color: black;
-}
-
-/*#main{
-	position:relative;
-}
-
-div#display {
-
-	position:absolute;
-}
-
-div#background {
- background-color: white;
- opacity: 0.5;
-
-}*/	
-
-
-
-body {
-    background-image: url(http://sugdiwa.github.io/Restaurant/img/service9.jpg);
-    background-repeat: no-repeat;
-   /* background-position: center;*/
-    background-size: cover;
-
-}
+    }
+    
+    #map {
+        position: fixed !important;
+        top: 100px;
+        right: 20px;
+        float: right;
+        height: 800px;
+        width: 45%;
+    }
