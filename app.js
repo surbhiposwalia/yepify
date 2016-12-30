@@ -1,6 +1,10 @@
+
+var loc;
+var terms;
+var resloc = [];
+
 var auth = {
     // Update with your auth tokens.
-    //
     consumerKey: "U0Psqj5u7EEkFsnudiJ4YQ",
     consumerSecret: "r0jdXot1Zk4e5DJdM0oyHteehoM",
     accessToken: "vBOaROMUUiDe-CtiHxeZKcorsIJlhQ5N",
@@ -9,7 +13,6 @@ var auth = {
         signatureMethod: "HMAC-SHA1"
     }
 }
-
 
 var accessor = {
     consumerSecret: auth.consumerSecret,
@@ -23,10 +26,6 @@ parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
 parameters.push(['oauth_token', auth.accessToken]);
 parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
 
-
-var loc;
-var terms;
-
 $(function() {
     $('.Search_form').submit(function(event) {
         event.preventDefault();
@@ -38,7 +37,7 @@ $(function() {
 
 
 function fetchResults(loc, terms) {
-    parameters.push(['terms', terms]);
+    parameters.push(['category_filter', terms]);
     parameters.push(['location', loc]);
 
     var message = {
@@ -59,7 +58,6 @@ function fetchResults(loc, terms) {
         'cache': true
     })
 }
-var resloc = [];
 
 function res_loc(latitude, longitude,name) {
 
@@ -70,7 +68,6 @@ function res_loc(latitude, longitude,name) {
 }
 
 function cb(data) {
-    console.log(data.businesses);
     displayResults(data.businesses);
 }
 
@@ -109,7 +106,3 @@ function initMap(lat,lng,name) {
     });
 }
 
-
-//value.location.name
-//value.location.rating,review_count, 
-//rating_img_url
