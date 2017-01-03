@@ -5,10 +5,10 @@ var resloc = [];
 
 var auth = {
     // Update with your auth tokens.
-    consumerKey: "U0Psqj5u7EEkFsnudiJ4YQ",
-    consumerSecret: "r0jdXot1Zk4e5DJdM0oyHteehoM",
-    accessToken: "vBOaROMUUiDe-CtiHxeZKcorsIJlhQ5N",
-    accessTokenSecret: "YrFftp5gmkVHgGZL78o2dhAgNMo",
+    consumerKey: "yZMgw_ThLcLxA-BgPk050g",
+    consumerSecret: "CToTvHpVsBM68s23cwnRjA8r_Ik",
+    accessToken: "XrYZbw2x2Mn-dR5UDxHSyppPjt-8WMYX",
+    accessTokenSecret: "x6k0k9x2VxqztHyYzKKvf3t1Ecw",
     serviceProvider: {
         signatureMethod: "HMAC-SHA1"
     }
@@ -33,6 +33,12 @@ $(function() {
         terms = $('#cuisine_id').val();
         fetchResults(loc, terms);
     });
+    $('#cuisine_id').change(function(event) {
+        event.preventDefault();
+        loc = $('#location_id').val();
+        terms = $('#cuisine_id').val();
+        fetchResults(loc, terms);
+    })
 });
 
 
