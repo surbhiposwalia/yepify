@@ -9,25 +9,24 @@
 </head>
 
 <body>
-    <form class="Search_form">
-        <h1>Restaurants Locator</h1>
-        <input id="location_id" type="text" name="" placeholder="Enter your city.. eg seattle, new york etc">
-        <button type="submit">Submit</button>
-        <select id="cuisine_id">
+    <h1 class="row">Restaurant Locator</h1>
+    <form class="Search_form col-12">
+        <div class="col-6 search-wrapper">
+            <input id="location_id" type="text" required class="search-box" placeholder="Enter your city.. eg seattle, new york etc">
+            <button class="close-icon" type="reset"></button>
+        </div>
+        <div class="align-center">
+        <button type="submit" class="col-2 button">Submit</button>
+        <select class="col-2 dropdown" id="cuisine_id">
             <option value="chinese">Chinese</option>
             <option value="mexican">Mexican</option>
             <option value="italian">Italian</option>
         </select>
-        <!-- <div id="main">
-<div id="background"> -->
-        <div id="display">
-            <!-- <p id="restaurants"> </p> -->
-            <!-- </div>
-</div> -->
         </div>
-        
     </form>
-    <div id="map"></div>
+    <div id="display" class="col-6">
+    </div>
+    <div id="map" class="col-6"></div>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="OAuth.js"></script>
     <script src="SHA1.js"></script>
