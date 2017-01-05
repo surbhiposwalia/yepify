@@ -4,7 +4,6 @@ var terms;
 var resloc = [];
 
 var auth = {
-    // Update with your auth tokens.
     consumerKey: "yZMgw_ThLcLxA-BgPk050g",
     consumerSecret: "CToTvHpVsBM68s23cwnRjA8r_Ik",
     accessToken: "XrYZbw2x2Mn-dR5UDxHSyppPjt-8WMYX",
@@ -37,7 +36,9 @@ $(function() {
         event.preventDefault();
         loc = $('#location_id').val();
         terms = $('#cuisine_id').val();
-        fetchResults(loc, terms);
+        if(loc != ""){
+            fetchResults(loc, terms);
+        }
     })
 });
 
@@ -89,7 +90,7 @@ function displayResults(data) {
         var review_count = value.review_count;
         var image = value.image_url;
         var rating_image = value.rating_img_url;
-        $('#display').append("<p class=restaurants> Name:<b>" + name + "</b><br><img src=" + image + ">Address: " + address + "<br>Review Count:" + review_count + "<img src=" + rating_image + "></p>")
+        $('#display').append("<p class='restaurants'> Name:<b>" + name + "</b><br><img src=" + image + ">Address: " + address + "<br>Review Count:" + review_count + "<img src=" + rating_image + "></p>")
     });
 }
 
