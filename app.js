@@ -40,9 +40,10 @@ $(function() {
             fetchResults(loc, terms);
         }
     })
+    
 });
 
-
+$('#map').hide();
 function fetchResults(loc, terms) {
     parameters.push(['category_filter', terms]);
     parameters.push(['location', loc]);
@@ -67,11 +68,9 @@ function fetchResults(loc, terms) {
 }
 
 function res_loc(latitude, longitude,name) {
-
     this.latitude = latitude;
     this.longitude = longitude;
     this.name=name;
-
 }
 
 function cb(data) {
@@ -96,6 +95,7 @@ function displayResults(data) {
 
 $(document).on('mouseenter','p',function(){
     var i =$('.restaurants').index(this);
+    $('#map').show();
     initMap(resloc[i].latitude,resloc[i].longitude,resloc[i].name);    
 })
 var map;
