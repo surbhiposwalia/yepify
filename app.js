@@ -18,13 +18,6 @@ var accessor = {
     tokenSecret: auth.accessTokenSecret
 };
 
-var parameters = [];
-parameters.push(['callback', 'cb']);
-parameters.push(['oauth_consumer_key', auth.consumerKey]);
-parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
-parameters.push(['oauth_token', auth.accessToken]);
-parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
-
 $(function() {
     $('.Search_form').submit(function(event) {
         event.preventDefault();
@@ -36,6 +29,7 @@ $(function() {
         event.preventDefault();
         loc = $('#location_id').val();
         terms = $('#cuisine_id').val();
+        console.log(loc, terms);
         if(loc != ""){
             fetchResults(loc, terms);
         }
@@ -45,6 +39,12 @@ $(function() {
 
 $('#map').hide();
 function fetchResults(loc, terms) {
+    var parameters = [];
+    parameters.push(['callback', 'cb']);
+    parameters.push(['oauth_consumer_key', auth.consumerKey]);
+    parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
+    parameters.push(['oauth_token', auth.accessToken]);
+    parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
     parameters.push(['category_filter', terms]);
     parameters.push(['location', loc]);
 
@@ -55,9 +55,7 @@ function fetchResults(loc, terms) {
     };
     OAuth.setTimestampAndNonce(message);
     OAuth.SignatureMethod.sign(message, accessor);
-
     var parameterMap = OAuth.getParameterMap(message.parameters);
-
     $.ajax({
         'url': message.action,
         'data': parameterMap,
@@ -79,6 +77,7 @@ function cb(data) {
 
 
 function displayResults(data) {
+    $('#display').empty();
     $.each(data, function(index, value) {
         var lat = value.location.coordinate.latitude;
         var long = value.location.coordinate.longitude;
@@ -89,7 +88,7 @@ function displayResults(data) {
         var review_count = value.review_count;
         var image = value.image_url;
         var rating_image = value.rating_img_url;
-        $('#display').append("<p class='restaurants'> Name:<b>" + name + "</b><br><img src=" + image + ">Address: " + address + "<br>Review Count:" + review_count + "<img src=" + rating_image + "></p>")
+        $('#display').append("<p class='restaurants'> Name:<b>" + name + "</b><br><img src=" + image + ">Address: " + address + "<br>Review Count:" + review_count + "    <img src=" + rating_image + "></p>")
     });
 }
 
