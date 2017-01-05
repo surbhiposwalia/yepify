@@ -52,8 +52,8 @@ select {
         
 #map {
     position: fixed !important;
-    top: 150px;
-    right: 20px;
+    top: 250px;
+    right: 10px;
     float: right;
     height: 45%;
     width: 45%;
