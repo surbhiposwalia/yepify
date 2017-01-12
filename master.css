@@ -37,14 +37,11 @@ select {
     background-position: center right;
     background-repeat: no-repeat;
     border: 1px solid #AAA;
-    border-radius: 2px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
     color: white;
     font-size: inherit;
     margin: 10px;
     overflow: hidden;
-    padding-top: 20px;
-    padding-bottom: 20px;
     text-overflow: ellipsis;
     white-space: nowrap;
     border: none;
