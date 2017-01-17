@@ -62,7 +62,7 @@ select {
         
 #map {
     position: fixed !important;
-    top: 250px;
+    top: 300px;
     right: 10px;
     float: right;
     height: 45%;
@@ -196,6 +196,15 @@ select {
   .col-m-11 {width: 91.66%;}
   .col-m-12 {width: 100%;}
   .restaurants {width: 50%;}
+  #map {
+    position: fixed !important;
+    top: 220px;
+    right: 10px;
+    float: right;
+    height: 45%;
+    width: 45%;
+    border: 5px solid black;
+}
 }
 
 /* For desktop: */
@@ -213,4 +222,13 @@ select {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
   .restaurants {width: 100%;}
+  #map {
+    position: fixed !important;
+    top: 180px;
+    right: 10px;
+    float: right;
+    height: 45%;
+    width: 45%;
+    border: 5px solid black;
+}
 }
