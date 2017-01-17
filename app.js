@@ -24,12 +24,13 @@ $(function() {
         loc = $('#location_id').val();
         terms = $('#cuisine_id').val();
         fetchResults(loc, terms);
+        $('#map').hide();
     });
     $('#cuisine_id').change(function(event) {
         event.preventDefault();
         loc = $('#location_id').val();
         terms = $('#cuisine_id').val();
-        console.log(loc, terms);
+        $('#map').hide();
         if(loc != ""){
             fetchResults(loc, terms);
         }
@@ -68,7 +69,7 @@ function fetchResults(loc, terms) {
 function res_loc(latitude, longitude,name) {
     this.latitude = latitude;
     this.longitude = longitude;
-    this.name=name;
+    this.name = name;
 }
 
 function cb(data) {
@@ -78,22 +79,23 @@ function cb(data) {
 
 function displayResults(data) {
     $('#display').empty();
+    resloc.length = 0;
     $.each(data, function(index, value) {
         var lat = value.location.coordinate.latitude;
         var long = value.location.coordinate.longitude;
-        var name=value.name;
+        var name = value.name;
         var tempLocation = new res_loc(lat, long,name);
         resloc.push(tempLocation);
         var address = value.location.address[0];
         var review_count = value.review_count;
         var image = value.image_url;
         var rating_image = value.rating_img_url;
-        $('#display').append("<p class='restaurants'> Name:<b>" + name + "</b><br><img src=" + image + ">Address: " + address + "<br>Review Count:" + review_count + "    <img src=" + rating_image + "></p>")
+        $('#display').append("<p class='restaurants'><img class='restaurantImg' src=" + image + "><br> Name:  " + name + "<br>Address:  " + address + "<br>Review Count:  " + review_count + "    <img src=" + rating_image + "></p>")
     });
 }
 
 $(document).on('mouseenter','p',function(){
-    var i =$('.restaurants').index(this);
+    var i = $('.restaurants').index(this);
     $('#map').show();
     initMap(resloc[i].latitude,resloc[i].longitude,resloc[i].name);    
 })

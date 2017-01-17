@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Josefin Slab', serif;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
 
 h1 {
     color: peru;
+    font-size: 45px;
 }
 
 p {
@@ -22,7 +24,17 @@ p {
     padding: 20px;
     color: white;
     width: 100%;
+    background: rgba(81, 39, 28, 0.8);
+    line-height: 1.5;
+    font-size: 18px;
 }
+
+.restaurantImg{
+  border: 2px solid black;
+  float: left;
+  margin: 10px;
+}
+
 select {
     -webkit-appearance: menulist-button;
     -webkit-user-select: none;
@@ -45,6 +57,7 @@ select {
     text-overflow: ellipsis;
     white-space: nowrap;
     border: none;
+    font-size: 21px;
 }
         
 #map {
@@ -70,6 +83,7 @@ select {
     border: 1px solid #ccc;
     outline: 0;
     border-radius: 15px;
+    font-size: 20px;
 }
 .search-box:focus {
     box-shadow: 0 0 15px 5px #b0e0ee;
@@ -92,7 +106,7 @@ select {
    text-align: center;
    text-decoration: none;
    display: inline-block;
-   font-size: 15px;
+   font-size: 21px;
    color: white; 
    height: 35px;
    max-width: 230px;
