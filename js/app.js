@@ -1,6 +1,16 @@
 var loc, terms, map;
 var resloc = [];
 
+var auth = {
+    consumerKey: "yZMgw_ThLcLxA-BgPk050g",
+    consumerSecret: "CToTvHpVsBM68s23cwnRjA8r_Ik",
+    accessToken: "XrYZbw2x2Mn-dR5UDxHSyppPjt-8WMYX",
+    accessTokenSecret: "x6k0k9x2VxqztHyYzKKvf3t1Ecw",
+    serviceProvider: {
+        signatureMethod: "HMAC-SHA1"
+    }
+}
+
 var accessor = {
     consumerSecret: auth.consumerSecret,
     tokenSecret: auth.accessTokenSecret
@@ -78,7 +88,7 @@ function displayResults(data) {
         var review_count = value.review_count;
         var image = value.image_url;
         var rating_image = value.rating_img_url;
-        $('#display').append("<p class='restaurants'><img class='restaurantImg' src=" + image + "><br> Name:  " + name + "<br>Address:  " + address + "<br>Review Count:  " + review_count + "    <img src=" + rating_image + "></p>")
+        $('#display').append("<p class='restaurants'><img class='restaurantImg' alt='No Image' src=" + image + "><br> Name:  " + name + "<br>Address:  " + address + "<br>Review Count:  " + review_count + "    <img src=" + rating_image + "></p>")
     });
 }
 
