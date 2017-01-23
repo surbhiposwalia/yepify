@@ -24,6 +24,7 @@ $(function() {
         fetchResults(loc, terms);
         $('#map').hide();
     });
+    
     $('#cuisine_id').change(function(event) {
         event.preventDefault();
         loc = $('#location_id').val();

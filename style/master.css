@@ -67,6 +67,7 @@ select {
     float: right;
     height: 45%;
     width: 45%;
+    border: 2px solid black;
 }
 
 .search-box,.close-icon,.search-wrapper {
