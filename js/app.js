@@ -1,17 +1,5 @@
-
-var loc;
-var terms;
+var loc, terms, map;
 var resloc = [];
-
-var auth = {
-    consumerKey: "yZMgw_ThLcLxA-BgPk050g",
-    consumerSecret: "CToTvHpVsBM68s23cwnRjA8r_Ik",
-    accessToken: "XrYZbw2x2Mn-dR5UDxHSyppPjt-8WMYX",
-    accessTokenSecret: "x6k0k9x2VxqztHyYzKKvf3t1Ecw",
-    serviceProvider: {
-        signatureMethod: "HMAC-SHA1"
-    }
-}
 
 var accessor = {
     consumerSecret: auth.consumerSecret,
@@ -99,7 +87,6 @@ $(document).on('mouseenter','p',function(){
     $('#map').show();
     initMap(resloc[i].latitude,resloc[i].longitude,resloc[i].name);    
 })
-var map;
 
 function initMap(lat,lng,name) {
     var myLatLng = { lat, lng };
