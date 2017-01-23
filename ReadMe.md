@@ -9,6 +9,9 @@ Provides a list of restaurants and ratings for an area, filtered by cuisine. Yel
 
 * Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
 
+* Run the file by previewing `index.html`
+
+
 ## Directory layout
 
 ```
@@ -21,3 +24,7 @@ Provides a list of restaurants and ratings for an area, filtered by cuisine. Yel
 └── index.html      Html code
 
 ```
+## Deployment
+
+* Add all the files to github gh-pages branch and do:
+`git push origin gh-pages`
