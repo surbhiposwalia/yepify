@@ -5,7 +5,7 @@ Provides a list of restaurants and ratings for an area, filtered by cuisine. Yel
 * Live Demo: https://surbhiposwalia.github.io/yepify/
 * GitHub: https://github.com/surbhiposwalia/yepify
 
-![Alt text](assests/yelpify.png?raw=true "Restaurant Locator")
+![Screenshot of Restaurant Locator](assets/yelpify.png?raw=true "Restaurant Locator")
 
 ### Working on the project
 
